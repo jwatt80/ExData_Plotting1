@@ -31,7 +31,7 @@ data_subset$day <- as.character(data_subset$day)
 
 data_subset$datetime <- paste(data_subset$Date, data_subset$Time, sep = " ")
 data_subset$datetime <- ymd_hms(data_subset$datetime)
-data_subset$datetime <- hms(data_subset$datetime)
+
 
 png(filename = "plot2.png") #default w x h = 480 x 480 px
 with(data_subset, plot(Global_active_power ~ datetime, 
